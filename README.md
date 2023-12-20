@@ -66,13 +66,13 @@ background-clip: text;
 -webkit-text-fill-color: transparent;
 ```
 
-1. `background: linear-gradient();`:
+* `background: linear-gradient();`:
    - 이 속성은 선형 그라디언트 배경을 설정합니다. `linear-gradient()` 함수는 그라디언트의 방향과 색상 정지점을 정의합니다. 여기서는 구체적인 값이 제공되지 않았으므로 기본값 또는 다른 곳에서 정의된 값을 사용하게 됩니다.
 
-2. `background-clip: text;`:
+* `background-clip: text;`:
    - 이 속성은 배경의 그라디언트가 텍스트의 형태로 자르도록 지정합니다. 즉, 배경은 텍스트 내부에서만 보이며, 텍스트 외부의 배경은 보이지 않습니다.
 
-3. `-webkit-text-fill-color: transparent;`:
+* `-webkit-text-fill-color: transparent;`:
    - 이것은 웹킷 기반 브라우저(예: Chrome, Safari)용 비표준 CSS 속성입니다. 이 속성은 텍스트의 채우기 색상을 투명하게 설정하여, 그라디언트 배경이 텍스트를 통해 보이도록 합니다.
 
 * 종합하면, 이 코드는 텍스트에 그라디언트 효과를 적용하여, 텍스트 자체는 투명하게 보이고 그라디언트 배경만 텍스트의 형태로 나타나게 하는 시각적 효과를 만듭니다. 이러한 스타일은 주로 웹 페이지에서 멋진 시각적 효과를 위해 사용됩니다.
@@ -96,6 +96,38 @@ background-clip: text;
 ```
 
 * 이 코드는 웹킷 기반 브라우저(예: Chrome, Safari)에서만 작동합니다. `-webkit-` 접두사는 웹킷 엔진을 사용하는 브라우저의 특정 기능을 나타냅니다. 이 코드를 사용하여 스크롤바의 높이, 엄지와 트랙의 배경색, 그리고 둥근 모서리를 설정할 수 있습니다. 이를 통해 기본 스크롤바보다 더 세련되고 사용자 정의된 스크롤바를 제공할 수 있습니다.
+
+4. 아래에 제시된 CSS 코드는 텍스트를 특정 라인 수로 제한하고, 초과하는 부분을 숨기는데 사용됩니다. 각 속성에 대해 설명하겠습니다:
+
+```css
+display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 2;
+overflow: hidden;
+text-overflow: ellipsis;
+```
+
+* `display: -webkit-box;`
+   - `-webkit-box`는 구형의 플렉스박스 모델을 사용하는데, 이는 주로 웹킷 기반의 브라우저에서 사용됩니다 (예: 구 버전의 Chrome, Safari).
+   - 이 속성은 `-webkit-line-clamp` 속성과 함께 사용되어야 합니다.
+
+* `-webkit-box-orient: vertical;`
+   - 이 속성은 `-webkit-box`의 방향을 정의합니다. `vertical` 값은 아이템들이 수직 방향으로 쌓이게 합니다.
+
+* `-webkit-line-clamp: 2;`
+   - 이 속성은 텍스트를 최대 몇 줄까지 보여줄 것인지 정의합니다. 여기서는 2줄로 설정되어 있습니다.
+   - 텍스트가 2줄을 초과하면, 나머지 텍스트는 숨겨집니다.
+   - 이 속성은 `-webkit-box`와 함께 사용되어야 하며, 오직 웹킷 기반 브라우저에서만 작동합니다.
+
+* `overflow: hidden;`
+   - 이 속성은 콘텐츠가 요소의 상자를 넘어갈 경우, 넘어가는 부분을 숨깁니다.
+   - 여기서는 `-webkit-line-clamp`에 의해 초과하는 텍스트를 숨기는데 사용됩니다.
+
+* `text-overflow: ellipsis;`
+   - 텍스트가 오버플로우(overflow)될 때, 넘치는 텍스트 대신에 말줄임표(`...`)를 표시합니다.
+   - 이 속성은 일반적으로 `overflow: hidden;`과 함께 사용됩니다.
+
+* 위 코드는 주로 웹킷 기반의 브라우저에서 멀티라인의 텍스트 오버플로우를 처리할 때 사용되며, 주로 제품 이름, 설명 등 긴 텍스트를 제한된 공간 내에 표시할 때 유용합니다. 그러나 이 방식은 모든 브라우저에서 지원되지 않으므로, 교차 브라우저 호환성을 고려할 필요가 있습니다.
 
 * 내일 중점적으로 찾아볼 내용
   * home 화면에서 터치 기반의 움직임과 스크롤바의 커스텀을 위해서는 js가 필요하다. 이는 후반부에 한 번에 적용하자.
