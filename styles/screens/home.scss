@@ -1,0 +1,226 @@
+.home-screen {
+    display: grid;
+    grid-template-rows: 150px 150px 150px 1000px;
+}
+
+.home-screen .ad:first-child {
+    img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
+}
+
+.home-screen .ad:nth-child(3) {
+    img {
+        padding-top: 9px;
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
+}
+
+.user-component {
+    overflow-x: scroll;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 16fr 1fr;
+    padding-bottom: 5px;
+    .user-items {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 15px;
+        padding: 0px 0px 5px 13px;
+        .item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            gap: 10px;
+            .item__icon {
+                font-size: 35px;
+            }
+            .item__title {
+                font-size: 9px;
+                font-weight: bold;
+            }
+        }
+    }
+    .another-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        color: var(--countBackgroundColor);
+    }
+}
+
+.recommendation {
+    width: 320px;
+    display: grid;
+    grid-template-rows: 380px 570px;
+    background-color: #F1F4F6;
+    padding-top: 10px;
+    gap: 10px;
+    .recommendation-box {
+        padding: 18px 0px 0px 0px;
+        background-color: white;
+        .recommendation-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding: 0px 18px 0px 18px;
+            margin-bottom: 18px;
+            .recommendation-title {
+                font-size: 16px;
+                font-weight: bold;
+                display: flex;
+                gap: 5px;
+                i.fa-chart-simple {
+                    background: linear-gradient(var(--purpleGradient));
+                    background-clip: text; //요소의 배경이 어디까지 확장될지
+                    -webkit-text-fill-color: transparent; // 텍스트의 색상이 투명해짐. 어도비의 마스크와 비슷?
+                }
+            }
+            .recommendation-add {
+                font-size: 11px;
+                font-weight: bold;
+                color: var(--countBackgroundColor);
+            }
+        }
+    }
+    .recommendation-information {
+        display: grid;
+        grid-template-columns: repeat(5, 150px);
+        background-color: #F1F4F6;
+        height: 295px;
+        gap: 2px;
+        overflow-x: scroll;
+        width: 320px;
+        .recommendation-information__box {
+            display: flex;
+            flex-direction: column;
+            padding: 18px 18px 0px 18px;
+            background-color: white;
+            gap: 6px;
+            .recommendation-description {
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                font-weight: bold;
+                font-size: 12px;
+                width: 114px;
+                height: auto;
+                line-height: 1.3;
+            }
+            .discount {
+                background-color: #DB2608;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                font-weight: bold;
+                width: 50px;
+                height: 15px;
+                font-size: 9px;
+                border-radius: 5px;
+            }
+            .rocketShipping {
+                font-size: 14px;
+                span{
+                    font-style: oblique;
+                    font-weight: bold;
+                    background: linear-gradient(var(--redGradient));
+                    background-clip: text; //요소의 배경이 어디까지 확장될지
+                    -webkit-text-fill-color: transparent; // 텍스트의 색상이 투명해짐. 어도비의 마스크와 비슷?
+                }
+            }
+            .sellerRocket {
+                font-size: 14px;
+                span{
+                    font-style: oblique;
+                    font-weight: bold;
+                    background: linear-gradient(var(--blueGradient));
+                    background-clip: text; //요소의 배경이 어디까지 확장될지
+                    -webkit-text-fill-color: transparent; // 텍스트의 색상이 투명해짐. 어도비의 마스크와 비슷?
+                }
+            }
+            .recommendation-price{
+                font-size: 12px;
+                font-weight: bold;
+                color: #AE0000;
+            }
+            .recommendation-star {
+                display: flex;
+                padding-top: 3px;
+                font-size: 12px;
+                color: #F8AF00;
+                .star-count {
+                    padding-left: 5px;
+                    color: #606060;
+                }
+            }
+            .recommendation-img img {
+                width: 100%;
+                height: 100px;
+                object-fit: cover;
+                padding-bottom: 7px;
+            }
+            .recommendation-name {
+                display: flex;
+                gap: 6.5px;
+                align-items: center;
+                .seller-logo img {
+                    width: 18px;
+                    height: 18px;
+                    border-radius: 50%;
+                    border: 1px solid #E6E6E6;
+                    object-fit: cover;
+                }
+                .seller-name {
+                    font-size: 12px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    .recommendation-link {
+        display: flex;
+        padding: 8px 18px 0px 0px;
+        justify-content: flex-end;
+        font-size: 10px;
+        color: #606060;
+        background-color: white;
+        height: 20px;
+    }
+}
+
+.recommendation-box-double .recommendation {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    padding-top: 0px;
+    .recommendation-information {
+        grid-template-rows: 245px 23px 245px;
+        gap: 2px;
+        row-gap: 0px;
+        height: 513px;
+        .colorbar {
+            grid-column: span 5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            .colorbar__gray {
+                background-color: #F1F4F6;
+                height: 2px;
+                width: 722px;
+            }
+        }
+    }
+}

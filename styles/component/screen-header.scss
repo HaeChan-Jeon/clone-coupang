@@ -1,0 +1,83 @@
+.header-bar {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    position: fixed;
+    width: 320px;
+    background-color: white;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    .bar {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr 1fr;
+        .logo {
+            grid-column: 2;
+            padding: 13px 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            img {
+                width: 70%;
+                height: 70%;
+                display: flex;
+            }
+        }
+        .bell-box {
+            display: flex;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            .bell-dot {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 20px;
+                width: 20px;
+                border-radius: 50%;
+                background-color: var(--countBackgroundColor);
+                color: white;
+                position: absolute;
+                font-size: 10px;
+                font-weight: bold;
+                right: 27px;
+                bottom: 22px;
+                box-shadow: 0px 0px 3px var(--countBackgroundColor);
+            }
+        }
+    }
+    .search {
+        padding: 0px 16px 10px 16px;
+        display: flex;
+        position: relative;
+        input#search {
+            width: 100%;
+            border-radius: 5px;
+            border: 1px solid #D3D4D7;
+            padding-left: 35px;
+            border-radius: 5px;
+            &::placeholder {
+                color: black;
+                font-weight: bold;
+            }
+            &:hover, &:focus, &:active {
+                outline: none;
+                background-color: white;
+            }
+        }
+        span {
+            position: absolute;
+            top: 22%;
+            left: 28px;
+            z-index: 1;
+            color: #4f5b66;
+        }
+        input {
+            &:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus, &:-webkit-autofill:active {
+                -webkit-box-shadow: 0 0 0 1000px white inset;
+            }
+            &::-webkit-search-decoration, &::-webkit-search-cancel-button, &::-webkit-search-results-button, &::-webkit-search-results-decoration{
+                display:none;
+            }
+        }
+    }
+}
