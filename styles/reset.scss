@@ -62,11 +62,26 @@ html, body {
 .user-component::-webkit-scrollbar {
 	height: 4px;
 }
+
 .user-component::-webkit-scrollbar-thumb {
 	background-color: #272B2F;
 	border-radius: 2px;
 }
+
 .user-component::-webkit-scrollbar-track {
 	background-color: #E1E2E4;
 	border-radius: 2px;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+a:active {
+	background: none;
+}
+
+* {
+    -webkit-tap-highlight-color: transparent;
 }

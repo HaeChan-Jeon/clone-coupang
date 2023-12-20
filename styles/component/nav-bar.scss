@@ -31,12 +31,13 @@
     gap: 7px;
     color: #969696;
     font-size: 20px;
+
     span {
         font-size: 10px;
         font-weight: bold;
     }
-    &:nth-child(3) {
-        color: var(--selectNavColor);
+    #select-nav, #select-span {
+        color: var(--countBackgroundColor);
     }
     &:nth-child(5) {
         position: relative;
