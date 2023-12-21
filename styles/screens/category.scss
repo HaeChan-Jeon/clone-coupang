@@ -1,0 +1,104 @@
+#phone-category {
+    grid-template-rows: 1fr;
+}
+
+.category-screen {
+    display: grid;
+    grid-template-rows: 87.5px 500px 254.5px;
+    padding: 0px 10px 0px 10px;
+}
+
+.main-category {
+    display: flex;
+    border-bottom: var(--searchBorder);
+    padding: 15px 0px 10px 0px;
+    justify-content: space-between;
+    align-items: center;
+    .main-category-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 55px;
+        height: 62px;
+        background-color: #FBFBFB;
+        gap: 8px;
+        border: 1px solid #F4F4F4;
+        & span:first-child {
+            font-size: 24.5px;
+        }
+        & span:nth-child(2) {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 9.5px;
+            font-weight: bold;
+            padding: 0px 6px 0px 6px;
+        }
+    }
+}
+
+.sub-category {
+    display: grid;
+    grid-template-rows: repeat(12, 1fr);
+    gap: 0.5px;
+    background-color: #C7CCD0;
+    .sub-category-box {
+        display: grid;
+        grid-template-columns: 1fr 1px 1fr;
+        background-color: white;
+        border-bottom: var(--searchBorder);
+        & .sub-category-content:first-child {
+            padding-left: 5px;
+            display: flex;
+            align-items: center;
+        }
+        .sub-category-border {
+            background-color: #C7CCD0;
+            margin: 12px 0px 12px 0px;
+        }
+        & .sub-category-content:nth-child(3) {
+            padding-left: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .item__icon {
+            font-size: 23px;
+            margin-right: 10px;
+        }
+        .item__title {
+            font-size: 11px;
+            font-weight: bold;
+        }
+    }
+}
+
+.add-category {
+    display: grid;
+    grid-template-rows: 32px 1fr;
+    .add-category-header {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        .add-category-title {
+            font-size: 15px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            i {
+                color: #FF0300;             
+            }
+        }
+        .add-category-add {
+            font-size: 12.5px;
+            font-weight: bold;
+            color: var(--countBackgroundColor);
+        }
+    }
+    .add-category-information {
+        background-color: white;
+    }
+}
