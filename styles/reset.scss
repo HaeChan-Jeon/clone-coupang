@@ -55,7 +55,8 @@ html, body {
   user-select: none;
 }
 
-.phone::-webkit-scrollbar, .recommendation-information::-webkit-scrollbar {
+.phone::-webkit-scrollbar, .recommendation-information::-webkit-scrollbar,
+.recent-information::-webkit-scrollbar, .guarante-information::-webkit-scrollbar {
     display: none;
 }
 
