@@ -156,4 +156,26 @@ text-overflow: ellipsis;
   * category의 하단에서 애니메이션과 js를 함께 주는 부분은 23일, 24일에 구현할 예정
   * 내일은 나머지 2개 스크린인 마이쿠팡과 장바구니를 구현할 계획
 
+## 2023-12-22(금)
+
+<img src="https://github.com/HaeChan-Jeon/clone-coupang/assets/146603024/e7ee2283-817f-4130-bcb0-de6d2bf9d066">
+<img src="https://github.com/HaeChan-Jeon/clone-coupang/assets/146603024/523f8d7b-78b0-4a8d-9e0d-80504b52e6eb">
+
+
+* 마이쿠팡 부분을 구현하였음. 광고 영상 같은 경우, 우선 이미지로 하였음
+* 상단의 그래픽은 일러스트레이터를 통해 직접 디자인하였으며, 이 과정에서 백그라운드 이미지를 사용하는 것에 대한 효율성을 확인하였음
+  * 백그라운드로 이미지를 넣는 경우에는, div를 통해 absolution으로 넣는 것보다 css에서 직접 삽입하는 것이 관리하기에 수월
+
+```SCSS
+.my-information {
+    background-image: url(/img/mypoupang_title.jpg);
+    background-size: cover;
+...
+}
+```
+
+* `background-image: url(/img/mypoupang_title.jpg);`: 이 속성은 요소의 배경으로 사용할 이미지를 지정합니다.
+* 여기서는 웹 서버의 `/img` 디렉토리에 있는 `mypoupang_title.jpg`라는 이미지 파일을 배경으로 설정합니다.
+* 심)
+
 ***
