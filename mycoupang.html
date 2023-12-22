@@ -14,10 +14,194 @@
 
     <div class="phone" id="phone-category">
         <div class="mycoupang-screen">
-            <div class="my-information"></div>
-            <div class="my-search"></div>
-            <div class="my-recommend"></div>
-            <div class="my-add"></div>
+            <div class="my-information">
+                <div class="user-information">
+                    <i class="fa-regular fa-user"></i>
+                </div>
+                <div class="user-main">
+                    <div class="user-main__name">포도 ></div>
+                    <div class="user-main__money">
+                        <span>쿠페이 머니</span>
+                        <span>0 원</span>
+                    </div>
+                    <div class="user-main__cash">
+                        <span>쿠팡캐시</span>
+                        <span>0 원</span>
+                    </div>
+                </div>
+                <div class="user-sub">
+                    <div class="user-sub-box">
+                        <div class="user-sub__count">27</div>
+                        <div class="user-usb__title">구매후기</div>
+                    </div>
+                    <div class="user-sub-box">
+                        <div class="user-sub__count">5</div>
+                        <div class="user-usb__title">찜한상품</div>
+                    </div>
+                    <div class="user-sub-box">
+                        <div class="user-sub__count">20</div>
+                        <div class="user-usb__title">최근본상품</div>
+                    </div>
+                    <div class="user-sub-box">
+                        <div class="user-sub__count">1</div>
+                        <div class="user-usb__title">자주산상품</div>
+                    </div>
+                </div>
+            </div>
+            <div class="my-search">
+                <span class="icon"><i class="fa fa-search"></i></span>
+                <input type="search" id="search" placeholder="주문한 상품을 검색할 수 있어요!">
+            </div>
+            <div class="my-recommendation">
+                <div class="recommendation-header">
+                    <div class="recommendation-title">최근 찾던 상품의 연관 상품</div>
+                    <div class="recommendation-add">광고</div>
+                </div>
+                <div class="recommendation-information">
+                    <div class="recommendation-information__box">
+                        <div class="recommendation-img">
+                            <img
+                                src="https://thumbnail6.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/4274029849193643-8ed4dff0-1342-48fc-9dbe-df3d5868e08f.jpg">
+                        </div>
+                        <div class="recommendation-name">
+                            <div class="seller-logo">
+                                <img
+                                    src="data:image/png;base64,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">
+                            </div>
+                            <div class="seller-name">키우다 상점 ></div>
+                        </div>
+                        <div class="recommendation-description">아이워너 미니 에어 하키게임 대형, 1박스, 레드</div>
+                        <div class="recommendation-price">45,400원</div>
+                        <div class="discount">🔖 46% 할인 중</div>
+                        <div class="sellerRocket">☄️<span>판매자 로켓</span></div>
+                        <div class="rocketDate">내일(토) 도착 보장</div>
+                        <div class="recommendation-star">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <div class="star-count">(2204)</div>
+                        </div>
+                    </div>
+                    <div class="recommendation-information__box">
+                        <div class="recommendation-img">
+                            <img
+                                src="https://thumbnail6.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/2023/09/07/16/4/e7154c58-79c2-4e7f-ad47-bcd6a3c54c10.jpg">
+                        </div>
+                        <div class="recommendation-name">
+                            <div class="seller-logo">
+                                <img
+                                    src="data:image/png;base64,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">
+                            </div>
+                            <div class="seller-name">키우다 상점 ></div>
+                        </div>
+                        <div class="recommendation-description">에르고바디 쉐이피 코어 장요근 골반 마사지 기구, 블랙</div>
+                        <div class="recommendation-price">35,900원</div>
+                        <div class="rocketShipping">🚀<span>로켓배송</span></div>
+                        <div class="rocketDate">내일(토) 도착 보장</div>
+                        <div class="recommendation-star">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <div class="star-count">(17)</div>
+                        </div>
+                    </div>
+                    <div class="recommendation-information__box">
+                        <div class="recommendation-img">
+                            <img
+                                src="https://thumbnail7.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/2696694858911343-a4589330-ca93-48ed-bb65-2aa7cc085e24.jpg">
+                        </div>
+                        <div class="recommendation-name">
+                            <div class="seller-logo">
+                                <img
+                                    src="data:image/png;base64,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">
+                            </div>
+                            <div class="seller-name">키우다 상점 ></div>
+                        </div>
+                        <div class="recommendation-description">베네통키즈 아동용 화섬 패딩장갑</div>
+                        <div class="recommendation-price">23,990원</div>
+                        <div class="discount">🔖 88% 할인 중</div>
+                        <div class="sellerRocket">☄️<span>판매자 로켓</span></div>
+                        <div class="rocketDate">내일(토) 도착 보장</div>
+                        <div class="recommendation-star">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <div class="star-count">(3)</div>
+                        </div>
+                    </div>
+                    <div class="recommendation-information__box">
+                        <div class="recommendation-img">
+                            <img
+                                src="https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/d055/aac98b11d76607cdf35ffb0bee83ce1b0de5f54358c2fc49860326ae5669.png">
+                        </div>
+                        <div class="recommendation-name">
+                            <div class="seller-logo">
+                                <img
+                                    src="data:image/png;base64,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">
+                            </div>
+                            <div class="seller-name">키우다 상점 ></div>
+                        </div>
+                        <div class="recommendation-description">세브산스케어 활력단백질 1통 프리미엄 유청 식물성 유산균 프로틴 파우더 분말, 288g, 1개
+                        </div>
+                        <div class="recommendation-price">31,410원</div>
+                        <div class="sellerRocket">☄️<span>판매자 로켓</span></div>
+                        <div class="rocketDate">내일(토) 도착 보장</div>
+                        <div class="recommendation-star">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <div class="star-count">(926)</div>
+                        </div>
+                    </div>
+                    <div class="recommendation-information__box">
+                        <div class="recommendation-img">
+                            <img
+                                src="https://thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/1572199047790286-50b71e6d-e97e-411d-9232-391eea3019ec.jpg">
+                        </div>
+                        <div class="recommendation-name">
+                            <div class="seller-logo">
+                                <img
+                                    src="data:image/png;base64,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">
+                            </div>
+                            <div class="seller-name">키우다 상점 ></div>
+                        </div>
+                        <div class="recommendation-description">탐사 방석형 핫팩 400g, 10개</div>
+                        <div class="recommendation-price">19,400원</div>
+                        <div class="sellerRocket">☄️<span>판매자 로켓</span></div>
+                        <div class="rocketDate">내일(토) 도착 보장</div>
+                        <div class="recommendation-star">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <div class="star-count">(32)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="my-add">
+                <div class="lucky-box">
+                    <div class="lucky-box-information">
+                        <div class="lucky-box-img">
+                            <img src="https://www.isic.co.kr/home/event2020/images/gift/icon_luckybox.png">
+                        </div>
+                        <div class="lucky-box-text">
+                            <span>포도님, 라이브 알림 받고</span>
+                            <span>최대 <span>1만원 캐시</span> 받아보세요</span>
+                        </div>
+                    </div>
+                    <div class="lucky-box-btn">꽝 없는 럭키박스 이벤트 참여하기</div>
+                </div>
+            </div>
             <div class="my-btn">
                 <div class="my-btn-box">
                     <div class="box__title">
@@ -28,77 +212,77 @@
                 </div>
                 <div class="my-btn-box">
                     <div class="box__title">
-                        <i class="fa-solid fa-rectangle-ad"></i>
+                        <i class="fa-solid fa-inbox"></i>
                         <span>취소·반품·교환목록</span>
                     </div>
                     <i class="fa-solid fa-angle-right"></i>
                 </div>
                 <div class="my-btn-box">
                     <div class="box__title">
-                        <i class="fa-solid fa-rectangle-ad"></i>
+                        <i class="fa-regular fa-star"></i>
                         <span>리뷰 관리</span>
                     </div>
                     <i class="fa-solid fa-angle-right"></i>
                 </div>
                 <div class="my-btn-box">
                     <div class="box__title">
-                        <i class="fa-solid fa-rectangle-ad"></i>
+                        <i class="fa-regular fa-address-card"></i>
                         <span>와우 멤버십</span>
                     </div>
                     <i class="fa-solid fa-angle-right"></i>
                 </div>
                 <div class="my-btn-box">
                     <div class="box__title">
-                        <i class="fa-solid fa-rectangle-ad"></i>
+                        <i class="fa-solid fa-sliders"></i>
                         <span>정기배송</span>
                     </div>
                     <i class="fa-solid fa-angle-right"></i>
                 </div>
                 <div class="my-btn-box">
                     <div class="box__title">
-                        <i class="fa-solid fa-rectangle-ad"></i>
+                        <i class="fa-regular fa-credit-card"></i>
                         <span>결제수단·쿠페이</span>
                     </div>
                     <i class="fa-solid fa-angle-right"></i>
                 </div>
                 <div class="my-btn-box">
                     <div class="box__title">
-                        <i class="fa-solid fa-rectangle-ad"></i>
+                        <i class="fa-regular fa-images"></i>
                         <span>로켓프레시 프레시백</span>
                     </div>
                     <i class="fa-solid fa-angle-right"></i>
                 </div>
                 <div class="my-btn-box">
                     <div class="box__title">
-                        <i class="fa-solid fa-rectangle-ad"></i>
+                        <i class="fa-regular fa-folder-closed"></i>
                         <span>쿠팡캐시·기프트카드·제휴포인트</span>
                     </div>
                     <i class="fa-solid fa-angle-right"></i>
                 </div>
                 <div class="my-btn-box">
                     <div class="box__title">
-                        <i class="fa-solid fa-rectangle-ad"></i>
+                        <i class="fa-solid fa-chalkboard"></i>
                         <span>할인쿠폰</span>
                     </div>
                     <i class="fa-solid fa-angle-right"></i>
                 </div>
                 <div class="my-btn-box">
                     <div class="box__title">
-                        <i class="fa-solid fa-rectangle-ad"></i>
+                        <i class="fa-regular fa-handshake"></i>
                         <span>리워드 프로그램</span>
                     </div>
                     <i class="fa-solid fa-angle-right"></i>
                 </div>
                 <div class="my-btn-box">
                     <div class="box__title">
-                        <i class="fa-solid fa-rectangle-ad"></i>
+                        <i class="fa-regular fa-circle-user"></i>
                         <span>쿠팡 A/S</span>
                     </div>
                     <i class="fa-solid fa-angle-right"></i>
                 </div>
                 <div class="my-btn-box">
                     <div class="box__title">
-                        <i class="fa-solid fa-rectangle-ad"></i>
+                        <i class="fa-brands fa-algolia"></i>
                         <span>고객센터</span>
                     </div>
                     <i class="fa-solid fa-angle-right"></i>
