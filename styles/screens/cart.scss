@@ -1,0 +1,25 @@
+#phone-cart {
+    grid-template-rows: 69px 32.5px 59px 1000px;
+}
+
+
+
+.test11 {
+    position: fixed;
+    background-color: black;
+    height: 32.5px;
+    width: 320px;
+}
+
+.test22 {
+    position: fixed;
+    background-color: blue;
+    height: 59px;
+    width: 320px;
+}
+
+.cart-screen {
+    display: grid;
+    grid-template-rows: 103px 457px 206px;
+    background-color: cadetblue;
+}
