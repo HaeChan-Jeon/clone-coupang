@@ -1,0 +1,50 @@
+.cart-screen-add-main:nth-child(3) {
+    .gauge-info {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        .gaugeBar-back {
+            display: flex;
+            position: relative;
+            .gaugeBar-bar {
+                width: 59px;
+                height: 8px;
+                border-radius: 4px;
+                background-color: #E0E3E8;
+            }
+            .gaugeBar-gauge {
+                width: 12.38px;
+                height: 8px;
+                border-radius: 4px;
+                background-color: #647383;
+                position: absolute;
+                left: 0px;
+            }
+        }
+        .gaugeBar-text {
+            font-size: 12px;
+            color: #464B52;
+            font-weight: bold;
+        }
+    }
+    .recommendation-information__box:nth-child(2) {
+        .gaugeBar-gauge {
+            width: 40.12px;
+        }
+    }
+    .recommendation-information__box:nth-child(3) {
+        .gaugeBar-gauge {
+            width: 49.55px;
+        }
+    }
+    .recommendation-information__box:nth-child(4) {
+        .gaugeBar-gauge {
+            width: 12.97px;
+        }
+    }
+    .recommendation-information__box:nth-child(5) {
+        .gaugeBar-gauge {
+            width: 51.91px;
+        }
+    }
+}

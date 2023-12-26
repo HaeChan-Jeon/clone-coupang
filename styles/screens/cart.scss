@@ -1,5 +1,5 @@
 #phone-cart {
-    grid-template-rows: 69px 32.5px 60px 91px 821px 1139px;
+    grid-template-rows: 69px 32.5px 60px 91px 821px 1171px;
     background-color: #F0EDEE;
 }
 
@@ -329,7 +329,7 @@
 
 .cart-screen-add {
     display: grid;
-    grid-template-rows: 316.5px 348.5px 413px 61px;
+    grid-template-rows: 316.5px 348.5px 413px;
     gap: 12px;
     .cart-screen-add-main:first-child {
         background-color: white;
@@ -513,65 +513,83 @@
         background-color: white;
         width: 320px;
         display: grid;
-        grid-template-rows: 49px 1fr;
+        grid-template-rows: 36.5px 1fr;
         .recommendation-header {
             display: flex;
+            justify-content: space-between;
             align-items: flex-end;
-            padding: 0px 0px 15px 18px;
-            border-bottom: var(--searchBorder);
+            padding: 21px 0px 0px 18px;
             .recommendation-title {
                 font-size: 15.5px;
                 font-weight: bold;
-                gap: 5px;
+                span {
+                    color: #D22D10;
+                }
             }
         }
         .recommendation-information {
             display: grid;
-            grid-template-columns: repeat(5, 122.5px);
-            background-color: white;
-            height: auto;
+            grid-template-columns: repeat(5, 161px);
+            background-color: #F1F4F6;
+            height: 340px;
             overflow-x: scroll;
-            margin-top: 16.5px;
-            padding: 0px 18px 0px 18px;
-            gap: 16px;
+            margin-top: 19.5px;
+            gap: 2px;
             .recommendation-information__box {
                 display: flex;
                 flex-direction: column;
+                padding: 15px 18px 0px 18px;
                 background-color: white;
                 gap: 6px;
+                .discountIng {
+                    font-size: 9.5px;
+                    color: white;
+                    background-color: #D22D10;
+                    height: 18px;
+                    margin-bottom: 3px;
+                    width: 61.5px;
+                    border-radius: 5px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .recommendation-name {
+                    font-weight: bold;
+                    font-size: 9.5px;
+                }
                 .recommendation-description {
                     display: -webkit-box;
                     -webkit-box-orient: vertical;
-                    -webkit-line-clamp: 2;
+                    -webkit-line-clamp: 1;
                     overflow: hidden;
                     text-overflow: ellipsis;
                     font-weight: bold;
                     font-size: 9.5px;
-                    height: 24.5px;
-                    line-height: 1.3;
+                    line-height: 1.2;
+                    height: 10px;
                 }
-                .rocketShipping {
-                    font-size: 14px;
-                    span{
-                        font-style: oblique;
-                        font-weight: bold;
-                        color: #308E36;
-                        background-clip: text; //요소의 배경이 어디까지 확장될지
-                        -webkit-text-fill-color: transparent; // 텍스트의 색상이 투명해짐. 어도비의 마스크와 비슷?
-                    }
-                }
-                .sellerRocket {
-                    font-size: 14px;
-                    span{
-                        font-style: oblique;
-                        font-weight: bold;
-                        color: #308E36;
-                    }
+                .discount {
+                    color: #AE0000;
+                    font-weight: bold;
+                    font-size: 11.5px;
                 }
                 .recommendation-price{
                     font-size: 12px;
                     font-weight: bold;
                     color: #AE0000;
+                    &:nth-child(7) {
+                        font-size: 15px;
+                    }
+                    span:nth-child(2) {
+                        font-weight: 100;
+                        color: #647383;
+                        text-decoration: line-through;
+                    }
+                }
+                .recommendation-free {
+                    font-size: 12px;
+                    color: #647383;
+                    font-weight: bold;
                 }
                 .recommendation-star {
                     display: flex;
@@ -585,8 +603,8 @@
                 }
                 .recommendation-img { 
                     img {
-                        width: 122.5px;
-                        height: 122.5px;
+                        width: 125px;
+                        height: 125px;
                         object-fit: cover;
                         padding-bottom: 7px;
                     }
