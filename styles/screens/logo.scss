@@ -1,0 +1,24 @@
+#phone-logo {
+    display: flex;
+    .coupang-main-logo img, .coupang-sub-logo img {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.coupang-main-logo {
+    animation: hideSplashScreen 0.5s ease-in-out forwards;
+}
+
+@keyframes hideSplashScreen {
+    0% {
+        visibility: visible;
+    }
+    99% {
+        visibility: hidden;
+    }
+    100% {
+        visibility: hidden;
+    }
+}
