@@ -14,11 +14,7 @@ const cartScreenValue = parseInt(cartScreenStyles.gap);
 const giftRocketTop = cartSubHeader.clientHeight + giftRequest.clientHeight;
 let myCashTop = phone.getBoundingClientRect().top +
     headerCartBar.clientHeight +
-    cartSubHeader.clientHeight +
-    giftRequest.clientHeight +
-    giftRocketMain.clientHeight +
-    myCart.clientHeight +
-    cartScreenValue;
+    giftRocketMain.clientHeight;
 let headerCartBarBottom = headerCartBar.getBoundingClientRect().bottom;
 
 // Function to handle scroll events
@@ -27,7 +23,7 @@ phone.addEventListener('scroll', function() {
     giftRocketMain.style.position = 'static';
     giftRocketMain.style.color = 'blue';
     
-  } else if (phone.scrollTop >= giftRocketTop && phone.scrollTop <= myCashTop) {
+  } else if (phone.scrollTop >= giftRocketTop || phone.scrollTop <= myCashTop) {
     giftRocketMain.style.position = 'fixed';
     giftRocketMain.style.top = headerCartBarBottom + 'px';
     giftRocketMain.style.color = 'red';
@@ -42,9 +38,5 @@ window.addEventListener('resize', function() {
   headerCartBarBottom = headerCartBar.getBoundingClientRect().bottom;
   myCashTop = phone.getBoundingClientRect().top +
     headerCartBar.clientHeight +
-    cartSubHeader.clientHeight +
-    giftRequest.clientHeight +
-    giftRocketMain.clientHeight +
-    myCart.clientHeight +
-    cartScreenValue;
+    giftRocketMain.clientHeight;
 });
