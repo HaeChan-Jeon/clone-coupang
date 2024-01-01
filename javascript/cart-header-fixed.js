@@ -5,38 +5,36 @@ const giftRequest = document.querySelector('.gift-request');
 const giftRocketMain = document.querySelector('.gift-rocket-main');
 const cartScreen = document.querySelector('.cart-screen');
 const myCart = document.querySelector('.my-cart');
-const myCash = document.querySelector('.my-cash');
 
 const cartScreenStyles = window.getComputedStyle(cartScreen);
-const cartScreenValue = parseInt(cartScreenStyles.gap);
+const cartScreenGap = parseInt(cartScreenStyles.gap);
 
-// Calculate the top position of giftRocketMain
 const giftRocketTop = cartSubHeader.clientHeight + giftRequest.clientHeight;
-let myCashTop = phone.getBoundingClientRect().top +
-    headerCartBar.clientHeight +
-    giftRocketMain.clientHeight;
+let myCashTop = cartSubHeader.clientHeight +
+    giftRequest.clientHeight + 
+    myCart.clientHeight + 
+    cartScreenGap;
 let headerCartBarBottom = headerCartBar.getBoundingClientRect().bottom;
 
-// Function to handle scroll events
 phone.addEventListener('scroll', function() {  
    if (phone.scrollTop <= giftRocketTop) {
     giftRocketMain.style.position = 'static';
-    giftRocketMain.style.color = 'blue';
-    
-  } else if (phone.scrollTop >= giftRocketTop || phone.scrollTop <= myCashTop) {
+      
+  } else if (phone.scrollTop >= giftRocketTop && phone.scrollTop <= myCashTop) {
     giftRocketMain.style.position = 'fixed';
     giftRocketMain.style.top = headerCartBarBottom + 'px';
-    giftRocketMain.style.color = 'red';
 
   } else if (phone.scrollTop >= myCashTop) {
-    // If false, set the position of giftRocketMain to its default value
-    giftRocketMain.style.color = 'yellow';
+    giftRocketMain.style.top = myCashTop + headerCartBar.clientHeight +  'px';
+    giftRocketMain.style.position = 'absolute';
   } 
 });
 
 window.addEventListener('resize', function() {
+  giftRocketTop = cartSubHeader.clientHeight + giftRequest.clientHeight;
   headerCartBarBottom = headerCartBar.getBoundingClientRect().bottom;
-  myCashTop = phone.getBoundingClientRect().top +
-    headerCartBar.clientHeight +
-    giftRocketMain.clientHeight;
+  myCashTop = cartSubHeader.clientHeight +
+    giftRequest.clientHeight + 
+    myCart.clientHeight + 
+    cartScreenGap;
 });
