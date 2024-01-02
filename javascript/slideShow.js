@@ -3,7 +3,7 @@ showSlides();
 
 function showSlides() {
     // "mySlides" 클래스를 가진 모든 요소를 가져옵니다.
-    const slides = document.getElementsByClassName("mySlides");
+    const slides = document.querySelectorAll('.mySlides');
 
     // 모든 슬라이드를 숨깁니다.
     for (let i = 0; i < slides.length; i++) {
